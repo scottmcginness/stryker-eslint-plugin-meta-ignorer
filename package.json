@@ -4,7 +4,11 @@
   "description": "Stryker ignorer for the meta property of ESLint plugin rules",
   "main": "src/index.js",
   "scripts": {
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:integration-post-generate": "node --test test/integration.test.mjs",
+    "test:integration": "npm run stryker && npm run test:integration-post-generate",
+    "test:generate": "node --test test/generator.test.mjs",
+    "stryker": "npx stryker run"
   },
   "keywords": [
     "stryker",
@@ -18,6 +22,8 @@
   "devDependencies": {
     "@eslint/js": "^9.4.0",
     "@stryker-mutator/api": "^8.2.6",
+    "@stryker-mutator/core": "^8.2.6",
+    "@types/node": "^20.14.0",
     "globals": "^15.3.0",
     "prettier": "3.3.0"
   }
