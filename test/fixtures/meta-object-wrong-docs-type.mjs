@@ -1,7 +1,7 @@
 export default {
   meta: {
     type: 'type',
-    docs: {},
+    docs: 'docs',
     schema: [],
   },
 };

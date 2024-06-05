@@ -24,6 +24,8 @@
     "@stryker-mutator/api": "^8.2.6",
     "@stryker-mutator/core": "^8.2.6",
     "@types/node": "^20.14.0",
+    "dedent": "^1.5.3",
+    "fake-diff": "^1.0.0",
     "globals": "^15.3.0",
     "prettier": "3.3.0"
   }

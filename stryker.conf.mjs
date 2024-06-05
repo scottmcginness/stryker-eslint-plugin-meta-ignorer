@@ -3,7 +3,7 @@
 // @ts-check
 /** @type {import('@stryker-mutator/api/core').PartialStrykerOptions} */
 export default {
-  mutate: ['./test/fixtures/**/*'],
+  mutate: ['./test/fixtures/**/*.[cm]js'],
   packageManager: 'npm',
   reporters: ['html', 'json', 'clear-text', 'progress'],
   testRunner: 'command',

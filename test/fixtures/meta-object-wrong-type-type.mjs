@@ -1,6 +1,6 @@
 export default {
   meta: {
-    type: 'type',
+    type: 987,
     docs: {},
     schema: [],
   },

@@ -3,5 +3,8 @@ export default {
     type: 'type',
     docs: {},
     schema: [],
+    messages: {
+      message1: 'abc',
+    },
   },
 };

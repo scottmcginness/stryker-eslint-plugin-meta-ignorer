@@ -1,5 +1,5 @@
 export default {
-  meta: {
+  other: {
     type: 'type',
     docs: {},
     schema: [],
