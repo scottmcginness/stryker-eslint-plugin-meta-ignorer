@@ -2,14 +2,8 @@
   "name": "stryker-eslint-plugin-meta-ignorer",
   "version": "1.0.0",
   "description": "Stryker ignorer for the meta property of ESLint plugin rules",
-  "main": "src/index.mjs",
-  "scripts": {
-    "lint": "eslint",
-    "test:integration-post-generate": "node --test test/integration.test.mjs",
-    "test:integration": "npm run stryker && npm run test:integration-post-generate",
-    "test:generate": "node --test test/generator.test.mjs",
-    "stryker": "npx stryker run"
-  },
+  "license": "MIT",
+  "author": "Scott McGinness",
   "keywords": [
     "stryker",
     "ignorer",
@@ -17,8 +11,15 @@
     "eslint",
     "plugin"
   ],
-  "author": "Scott McGinness",
-  "license": "MIT",
+  "main": "src/index.mjs",
+  "scripts": {
+    "format:pkg": "format-package -w",
+    "lint": "eslint",
+    "stryker": "npx stryker run",
+    "test:generate": "node --test test/generator.test.mjs",
+    "test:integration": "npm run stryker && npm run test:integration-post-generate",
+    "test:integration-post-generate": "node --test test/integration.test.mjs"
+  },
   "devDependencies": {
     "@eslint/js": "^9.4.0",
     "@stryker-mutator/api": "^8.2.6",
@@ -26,6 +27,7 @@
     "@types/node": "^20.14.0",
     "dedent": "^1.5.3",
     "fake-diff": "^1.0.0",
+    "format-package": "^7.0.0",
     "globals": "^15.3.0",
     "prettier": "3.3.0"
   }
