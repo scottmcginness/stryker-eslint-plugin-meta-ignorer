@@ -1,8 +1,12 @@
 {
   "name": "stryker-eslint-plugin-meta-ignorer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Stryker ignorer for the meta property of ESLint plugin rules",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scottmcginness/stryker-eslint-plugin-meta-ignorer.git"
+  },
   "author": "Scott McGinness",
   "keywords": [
     "stryker",
@@ -12,6 +16,11 @@
     "plugin"
   ],
   "main": "src/index.mjs",
+  "files": [
+    "src/**",
+    "LICENSE.txt",
+    "README.md"
+  ],
   "scripts": {
     "format:pkg": "format-package -w",
     "lint": "eslint",
