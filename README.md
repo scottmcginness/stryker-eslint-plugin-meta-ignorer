@@ -12,7 +12,7 @@ In your `stryker.conf.mjs` file, add or update the following two sections:
 
 ```javascript
 export default {
-	...,
+  ...,
   ignorers: ['ignore-meta'],
   plugins: ['@stryker-mutator/*', 'stryker-eslint-plugin-meta-ignorer']
 };
