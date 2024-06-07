@@ -78,3 +78,9 @@ test('meta-object-with-non-object', async () => {
   assert(sut.default.meta[0].type === 'type');
   assert(sut.default.meta[0].schema.length === 0);
 });
+
+test('meta-object-with-spread', async () => {
+  const sut = await import('./fixtures/meta-object-with-spread.mjs');
+  assert(sut.default.meta.type === 'type');
+  assert(sut.default.meta.schema.length === 0);
+});

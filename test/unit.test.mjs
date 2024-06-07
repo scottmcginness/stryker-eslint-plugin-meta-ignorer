@@ -146,3 +146,7 @@ it('does not ignore anything in meta-assignment-to-non-object', async () => {
 it('does not ignore anything in meta-object-with-non-object', async () => {
   await runExpectingNoIgnores('meta-object-with-non-object.mjs');
 });
+
+it('does not ignore anything in meta-object-with-spread', async () => {
+  await runExpectingNoIgnores('meta-object-with-spread.mjs');
+});

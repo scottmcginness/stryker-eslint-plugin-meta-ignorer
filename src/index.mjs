@@ -19,6 +19,7 @@ const isPluginMeta = (expression) =>
   expression.properties.filter(
     (p) =>
       p.type === 'ObjectProperty' &&
+      // Stryker disable next-line ConditionalExpression -- Identifier needed to type-check conditions that follow.
       p.key.type === 'Identifier' &&
       p.key.name in metaKeys &&
       p.value.type === metaKeys[p.key.name],
@@ -27,6 +28,7 @@ const isPluginMeta = (expression) =>
 /** @param {import('babel-traverse').NodePath} path */
 const isObjectWithMeta = (path) =>
   path.isObjectProperty() &&
+  // Stryker disable next-line ConditionalExpression -- Identifier needed to type-check conditions that follow.
   path.node.key.type === 'Identifier' &&
   path.node.key.name === 'meta' &&
   path.node.value.type === 'ObjectExpression' &&
