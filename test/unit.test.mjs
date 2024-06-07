@@ -53,7 +53,15 @@ const runExpectingIgnoredPart = async (fileName, expectedIgnoredPart) =>
 const runExpectingNoIgnores = async (fileName) => runExpecting(fileName, '', false);
 
 it('exports a Stryker plugin', async () => {
-  assert(sut.length === 1);
+  assert.equal(sut.length, 1);
+});
+
+it('is called ignore-meta', () => {
+  assert.equal(sut[0].name, 'ignore-meta');
+});
+
+it('is an ignorer', () => {
+  assert.equal(sut[0].kind, 'Ignore');
 });
 
 it('ignores correctly in meta-export', async () => {
