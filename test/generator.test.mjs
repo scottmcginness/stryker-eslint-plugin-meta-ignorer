@@ -72,3 +72,9 @@ test('meta-assignment-to-non-object', async () => {
   assert(sut.default.meta[0].type === 'type');
   assert(sut.default.meta[0].schema.length === 0);
 });
+
+test('meta-object-with-non-object', async () => {
+  const sut = await import('./fixtures/meta-object-with-non-object.mjs');
+  assert(sut.default.meta[0].type === 'type');
+  assert(sut.default.meta[0].schema.length === 0);
+});
