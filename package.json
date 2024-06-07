@@ -1,6 +1,6 @@
 {
   "name": "stryker-eslint-plugin-meta-ignorer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Stryker ignorer for the meta property of ESLint plugin rules",
   "license": "MIT",
   "repository": {
