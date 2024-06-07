@@ -4,7 +4,7 @@ import babelTraverseModule from '@babel/traverse';
 import assert from 'node:assert';
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { afterEach, beforeEach, it } from 'node:test';
+import { it } from 'node:test';
 import { strykerPlugins as sut } from '../src/index.mjs';
 import dedent from 'dedent';
 import { EOL } from 'node:os';

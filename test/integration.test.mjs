@@ -1,10 +1,10 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { test } from 'node:test';
-import { EOL } from 'node:os';
 import fakeDiff from 'fake-diff';
 import { pathToFileURL } from 'node:url';
 import dedent from 'dedent';
+import process from 'node:process';
 
 const locFormat = ({ location: { start, end } }) =>
   `s l:${start.line},c:${start.column} e l:${end.line},c:${end.column}`;
@@ -34,7 +34,7 @@ const actual = async () => {
   let contents;
   try {
     contents = await fs.readFile(actualPath, { encoding: 'utf-8' });
-  } catch (e) {
+  } catch {
     throw new Error(`Actual Stryker report at '${actualPath}' was missing.`);
   }
 
@@ -53,7 +53,7 @@ const htmlPath = () => path.join(import.meta.dirname, '../reports/mutation/mutat
 const expected = async () => {
   try {
     return await fs.readFile(snapshotPath(), { encoding: 'utf-8' });
-  } catch (e) {
+  } catch {
     return undefined;
   }
 };

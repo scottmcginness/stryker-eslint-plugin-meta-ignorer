@@ -41,6 +41,7 @@
     "@stryker-mutator/core": "^8.2.6",
     "@types/node": "^20.14.0",
     "dedent": "^1.5.3",
+    "eslint": "^9.4.0",
     "fake-diff": "^1.0.0",
     "format-package": "^7.0.0",
     "globals": "^15.3.0",
