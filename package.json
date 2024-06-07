@@ -24,6 +24,7 @@
   "scripts": {
     "format:pkg": "format-package -w",
     "lint": "eslint",
+    "stryker:package": "npx stryker run stryker-package.conf.mjs",
     "stryker:generator": "npx stryker run stryker-generator.conf.mjs",
     "test:generate": "node --test test/generator.test.mjs",
     "test:integration": "npm run stryker:generator && npm run test:integration-post-generate",
