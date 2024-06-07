@@ -9,6 +9,7 @@ export default {
   testRunner: 'command',
   commandRunner: { command: 'npm run test:unit' },
   coverageAnalysis: 'all',
+  thresholds: { high: 90, low: 75, break: 100 },
   htmlReporter: {
     fileName: 'reports/mutation/package.html',
   },
