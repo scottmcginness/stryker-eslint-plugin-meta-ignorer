@@ -2,11 +2,15 @@
 import { PluginKind, declareValuePlugin } from '@stryker-mutator/api/plugin';
 
 /** @param {{ name?: string, type: string }} expr */
-const isMetaIdentifier = (expr) => expr.type === 'Identifier' && expr.name === 'meta';
+const isMetaIdentifier = (expr) =>
+  // Stryker disable next-line ConditionalExpression -- Identifier needed to type-check conditions that follow.
+  expr.type === 'Identifier' && expr.name === 'meta';
 
 /** @param {import('babel-types').LVal} left */
 const refersToMeta = (left) =>
-  isMetaIdentifier(left) || (left.type === 'MemberExpression' && isMetaIdentifier(left.property));
+  isMetaIdentifier(left) ||
+  // Stryker disable next-line ConditionalExpression -- MemberExpression needed to type-check conditions that follow.
+  (left.type === 'MemberExpression' && isMetaIdentifier(left.property));
 
 const metaKeys = {
   type: 'StringLiteral',
