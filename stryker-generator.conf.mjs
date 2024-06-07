@@ -11,4 +11,7 @@ export default {
   coverageAnalysis: 'all',
   ignorers: ['ignore-meta'],
   plugins: ['@stryker-mutator/*', './src/index.mjs'],
+  htmlReporter: {
+    fileName: 'reports/mutation/fixtures.html',
+  },
 };

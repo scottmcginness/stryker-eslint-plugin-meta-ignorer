@@ -24,9 +24,9 @@
   "scripts": {
     "format:pkg": "format-package -w",
     "lint": "eslint",
-    "stryker": "npx stryker run",
+    "stryker:generator": "npx stryker run stryker-generator.conf.mjs",
     "test:generate": "node --test test/generator.test.mjs",
-    "test:integration": "npm run stryker && npm run test:integration-post-generate",
+    "test:integration": "npm run stryker:generator && npm run test:integration-post-generate",
     "test:integration-post-generate": "node --test test/integration.test.mjs",
     "test:unit": "node --test test/unit.test.mjs",
     "test:unit:debug": "node --test --watch --inspect-brk test/unit.test.mjs",
