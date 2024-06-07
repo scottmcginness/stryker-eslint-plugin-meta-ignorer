@@ -138,3 +138,7 @@ it('does not ignore anything in export-same-properties-not-called-meta', async (
 it('does not ignore anything in object-same-properties-not-called-meta', async () => {
   await runExpectingNoIgnores('object-same-properties-not-called-meta.mjs');
 });
+
+it('does not ignore anything in meta-assignment-to-non-object', async () => {
+  await runExpectingNoIgnores('meta-assignment-to-non-object.cjs');
+});

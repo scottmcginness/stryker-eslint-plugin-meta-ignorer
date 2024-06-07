@@ -66,3 +66,9 @@ test('object-same-properties-not-called-meta', async () => {
   assert(sut.default.other.type === 'type');
   assert(sut.default.other.schema.length === 0);
 });
+
+test('meta-assignment-to-non-object', async () => {
+  const sut = await import('./fixtures/meta-assignment-to-non-object.cjs');
+  assert(sut.default.meta[0].type === 'type');
+  assert(sut.default.meta[0].schema.length === 0);
+});
